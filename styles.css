@@ -1,0 +1,93 @@
+/* ====== Base ====== */
+:root{
+  --bg: #0b1220;
+  --card: #0f172a;
+  --text: #e5e7eb;
+  --muted: #93a3b8;
+  --primary: #22c55e;
+  --primary-strong: #16a34a;
+  --wa: #25D366;
+  --accent: #38bdf8;
+  --shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+*{ box-sizing: border-box }
+html,body{ height:100% }
+body{
+  margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";
+  background: linear-gradient(180deg, #0b1220 0%, #0b1220 60%, #0d1426 100%);
+  color: var(--text);
+}
+img{ max-width:100%; display:block }
+a{ color: var(--accent); text-decoration: none }
+.container{ width:min(1100px, 92%); margin:0 auto }
+
+/* ====== Header ====== */
+.header{ display:flex; align-items:center; justify-content:space-between; padding:18px 0 }
+.brand{ display:flex; align-items:center; gap:10px; font-weight:700; color:#fff; letter-spacing:.3px }
+.brand img{ filter: drop-shadow(0 4px 16px rgba(0,0,0,.35)) }
+.nav{ display:flex; gap:18px; align-items:center }
+.nav a{ color: var(--text); opacity:.9 }
+.nav a.btn{ color:#0b1220 }
+
+/* ====== Hero ====== */
+.hero{ display:grid; grid-template-columns: 1.3fr 1fr; align-items:center; gap:40px; padding:40px 0 10px }
+.hero__text h1{ font-size: clamp(28px, 4vw, 44px); line-height:1.1; margin: 0 0 12px }
+.hero__text p{ color: var(--muted); font-size: clamp(16px, 2.3vw, 18px) }
+.highlight{ color: var(--primary) }
+.cta{ display:flex; gap:12px; margin-top:18px; flex-wrap: wrap }
+.hero__media{ display:flex; justify-content:center }
+.dashboard-card{
+  background: radial-gradient(1200px 500px at 50% -40%, rgba(56,189,248,.2), transparent 60%), var(--card);
+  border: 1px solid rgba(148,163,184,.15); border-radius: 16px; padding: 22px; box-shadow: var(--shadow);
+  display:grid; grid-template-columns: repeat(3,1fr); gap:14px; min-width: 320px;
+}
+.kpi{ background: rgba(148,163,184,.08); border-radius: 12px; padding: 14px; text-align:center }
+.kpi span{ color: var(--muted); font-size:12px; text-transform: uppercase; letter-spacing: .12em }
+.kpi strong{ display:block; font-size: 22px; margin-top: 6px }
+
+/* ====== Sections ====== */
+.section{ padding: 56px 0 }
+.section h2{ font-size: clamp(22px, 3vw, 32px); margin:0 0 16px }
+.section--alt{ background: linear-gradient(180deg, rgba(148,163,184,.05), transparent) }
+.cards{ grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) ); gap:16px }
+.card{ background: rgba(148,163,184,.06); border:1px solid rgba(148,163,184,.12); border-radius: 14px; padding:16px; transition: transform .2s ease, border-color .2s ease }
+.card:hover{ transform: translateY(-3px); border-color: rgba(56,189,248,.35) }
+.list{ color: var(--muted); line-height:1.8 }
+.cols{ display:grid; grid-template-columns: 1fr 1fr; gap:24px }
+
+/* ====== Footer ====== */
+.footer{ border-top:1px solid rgba(148,163,184,.12); margin-top: 32px; background: rgba(148,163,184,.04) }
+.footer__inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; flex-wrap: wrap }
+.footer__nav{ display:flex; gap:16px }
+.footer a{ color: var(--muted) }
+
+/* ====== Buttons ====== */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:10px 14px; border-radius:10px; font-weight:600; border:1px solid transparent; cursor:pointer }
+.btn--primary{ background: var(--primary); color:#041117; border-color: rgba(0,0,0,.1) }
+.btn--primary:hover{ background: var(--primary-strong) }
+.btn--ghost{ background: transparent; color: var(--text); border-color: rgba(148,163,184,.3) }
+.btn--ghost:hover{ border-color: rgba(56,189,248,.6) }
+.btn--whatsapp{ background: var(--wa); color: #052011 }
+.btn--whatsapp:hover{ filter: brightness(1.05) }
+.btn--lg{ padding: 14px 18px; font-size: 16px }
+
+/* ====== FAB (WhatsApp) ====== */
+.fab{
+  position: fixed; right: 18px; bottom: 18px; width: 56px; height: 56px; border-radius: 999px; border:none; cursor: pointer;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  background: #0b1b14; box-shadow: var(--shadow);
+}
+.fab svg{ filter: drop-shadow(0 4px 12px rgba(0,0,0,.35)) }
+.fab__badge{
+  position: absolute; right: 64px; white-space: nowrap; background: #092615; border: 1px solid rgba(37, 211, 102, .35);
+  color: #d1fae5; padding:6px 10px; border-radius: 8px; font-size: 13px; opacity:.95;
+  transform: translateX(8px); animation: slideIn .6s cubic-bezier(.2,.8,.2,1) both;
+}
+@keyframes slideIn{ from{ opacity:0; transform: translateX(30px) } to{ opacity:1; transform: translateX(8px) } }
+
+/* ====== Responsive ====== */
+@media (max-width: 880px){
+  .hero{ grid-template-columns: 1fr; padding-top: 20px }
+  .hero__media{ order: -1 }
+  .cols{ grid-template-columns: 1fr }
+}
