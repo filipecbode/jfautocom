@@ -5,29 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JF Autocom — Automação comercial em Brasília desde 2014</title>
   <meta name="description" content="Automação comercial em Brasília: sistemas para controle fiscal, vendas e estoque, impressoras fiscais e computadores. Desde 2014." />
-  <meta name="theme-color" content="#0f172a" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="styles.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="assets/icon-192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <meta property="og:title" content="JF Autocom — Automação comercial" />
   <meta property="og:description" content="Soluções em automação comercial: sistemas fiscais, PDV, estoque, impressoras fiscais e computadores." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <!-- Ajuste a URL quando publicar -->
+  <meta property="og:image" content="assets/og-image.png" />
   <meta property="og:url" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="header-light">
   <header class="container header">
     <a class="brand" href="#inicio" aria-label="JF Autocom - início">
-      <img src="assets/logo.svg" alt="Logo JF Autocom" width="36" height="36" />
-      <span>JF Autocom</span>
+      <img src="assets/logo.png" alt="Logo JF Autocom" class="brand__logo" />
     </a>
     <nav class="nav">
       <a href="#servicos">Serviços</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
-      <a class="btn btn--whatsapp" href="#whatsapp" onclick="return openWhatsApp()">WhatsApp</a>
+      <div class="split-cta">
+        <button class="btn btn--whatsapp" onclick="return openWhats('filipe')">WhatsApp — Filipe Bodê</button>
+        <button class="btn btn--whatsapp btn--outline" onclick="return openWhats('paulo')">WhatsApp — Paulo Junior</button>
+      </div>
     </nav>
   </header>
 
@@ -37,8 +42,8 @@
         <h1>Automação comercial em <span class="highlight">Brasília</span> desde 2014</h1>
         <p>Sistemas para controle fiscal, vendas e estoque, <strong>impressoras fiscais</strong> e <strong>computadores</strong>. Tudo para o seu PDV funcionar com segurança e eficiência.</p>
         <div class="cta">
-          <a class="btn btn--primary" href="#whatsapp" onclick="return openWhatsApp('Olá! Quero saber mais sobre os sistemas da JF Autocom.')">Falar no WhatsApp</a>
-          <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+          <a class="btn btn--primary" href="#whatsapp" onclick="return openWhats('filipe','Olá! Quero saber mais sobre os sistemas da JF Autocom.')">Falar com Filipe Bodê</a>
+          <a class="btn btn--ghost" href="#whatsapp" onclick="return openWhats('paulo','Olá, Paulo! Preciso de uma cotação de automação comercial.')">Falar com Paulo Junior</a>
         </div>
       </div>
       <div class="hero__media" aria-hidden="true">
@@ -88,13 +93,20 @@
 
     <section id="contato" class="section container">
       <h2>Fale com a gente</h2>
-      <p>O jeito mais rápido é pelo WhatsApp. Clique no botão abaixo para iniciar a conversa.</p>
-      <p>
-        <a class="btn btn--whatsapp btn--lg" href="#whatsapp" onclick="return openWhatsApp('Olá! Preciso de automação comercial para minha empresa.')">
-          <span class="wa-icon" aria-hidden="true">✆</span>
-          <span>Chamar no WhatsApp</span>
-        </a>
-      </p>
+      <div class="contact-cards">
+        <article class="contact">
+          <h3>Filipe Bodê</h3>
+          <p><a href="#whatsapp" onclick="return openWhats('filipe')">WhatsApp: +55 61 99538-3096</a></p>
+        </article>
+        <article class="contact">
+          <h3>Paulo Junior</h3>
+          <p><a href="#whatsapp" onclick="return openWhats('paulo')">WhatsApp: +55 61 9441-0768</a></p>
+        </article>
+        <article class="contact">
+          <h3>Email</h3>
+          <p><a href="mailto:jfautocomdf@gmail.com">jfautocomdf@gmail.com</a></p>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -105,37 +117,26 @@
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
         <a href="#contato">Contato</a>
-        <a href="#whatsapp" onclick="return openWhatsApp()">WhatsApp</a>
+        <a href="privacy.html">Política de Privacidade (LGPD)</a>
       </nav>
     </div>
   </footer>
 
-  <!-- Botão flutuante do WhatsApp -->
-  <button class="fab" aria-label="Abrir conversa no WhatsApp" onclick="openWhatsApp()">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-      <path fill="#25D366" d="M19.11 17.19c-.26-.13-1.54-.76-1.77-.84-.24-.09-.41-.13-.59.13-.17.26-.67.84-.82 1.02-.15.17-.3.2-.56.07-.26-.13-1.09-.4-2.08-1.27-.77-.69-1.29-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.4-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.59-1.41-.81-1.93-.21-.5-.43-.43-.59-.44-.15-.01-.32-.01-.49-.01-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.15 0 1.26.93 2.48 1.06 2.65.13.17 1.83 2.8 4.44 3.91.62.27 1.1.43 1.47.55.62.2 1.19.17 1.64.1.5-.07 1.54-.63 1.76-1.25.22-.62.22-1.15.15-1.26-.06-.1-.23-.16-.49-.29z"/>
-      <path fill="#25D366" d="M16 3C8.82 3 3 8.82 3 16c0 2.29.61 4.46 1.67 6.33L3 29l6.86-1.8C11.66 28.36 13.76 29 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23c-1.98 0-3.82-.58-5.35-1.58l-.38-.24-4.05 1.06 1.09-3.95-.25-.4C6.06 19.82 5.5 18 5.5 16 5.5 10.76 9.76 6.5 15 6.5S24.5 10.76 24.5 16 20.24 26 15 26z"/>
-    </svg>
-    <span class="fab__badge">Fale com a JF</span>
-  </button>
+  <!-- Botão flutuante do WhatsApp (menu com 2 contatos) -->
+  <div class="fab-group">
+    <div class="fab-menu" id="fabMenu" aria-label="Contatos WhatsApp">
+      <button class="fab-option" onclick="openWhats('filipe')">Filipe Bodê</button>
+      <button class="fab-option" onclick="openWhats('paulo')">Paulo Junior</button>
+    </div>
+    <button class="fab" aria-label="Abrir menu do WhatsApp" id="fabToggle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+        <path fill="#25D366" d="M19.11 17.19c-.26-.13-1.54-.76-1.77-.84-.24-.09-.41-.13-.59.13-.17.26-.67.84-.82 1.02-.15.17-.3.2-.56.07-.26-.13-1.09-.4-2.08-1.27-.77-.69-1.29-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.4-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.59-1.41-.81-1.93-.21-.5-.43-.43-.59-.44-.15-.01-.32-.01-.49-.01-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.15 0 1.26.93 2.48 1.06 2.65.13.17 1.83 2.8 4.44 3.91.62.27 1.1.43 1.47.55.62.2 1.19.17 1.64.1.5-.07 1.54-.63 1.76-1.25.22-.62.22-1.15.15-1.26-.06-.1-.23-.16-.49-.29z"/>
+        <path fill="#25D366" d="M16 3C8.82 3 3 8.82 3 16c0 2.29.61 4.46 1.67 6.33L3 29l6.86-1.8C11.66 28.36 13.76 29 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23c-1.98 0-3.82-.58-5.35-1.58l-.38-.24-4.05 1.06 1.09-3.95-.25-.4C6.06 19.82 5.5 18 5.5 16 5.5 10.76 9.76 6.5 15 6.5S24.5 10.76 24.5 16 20.24 26 15 26z"/>
+      </svg>
+      <span class="fab__badge">WhatsApp</span>
+    </button>
+  </div>
 
   <script src="script.js"></script>
-
-  <!-- Dados estruturados (ajuste a URL e dados quando publicar) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "JF Autocom",
-    "description": "Automação comercial em Brasília: sistemas para controle fiscal, PDV, estoque, impressoras fiscais e computadores.",
-    "areaServed": "Brasília, DF",
-    "foundingDate": "2014-01-01",
-    "url": "",
-    "telephone": "+55 61 99538-3096",
-    "sameAs": [
-      "https://wa.me/5561995383096"
-    ]
-  }
-  </script>
 </body>
 </html>
