@@ -1,7 +1,6 @@
-// Contatos WhatsApp
+// Contato WhatsApp
 const WA = {
-  filipe: '5561995383096',
-  paulo: '556194410768',
+  filipe: '5561995383096'
 };
 
 function openWhats(who, message){
@@ -28,12 +27,9 @@ function openWhats(who, message){
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // FAB menu toggle
+  // FAB button (now just opens WhatsApp directly)
   const toggle = document.getElementById('fabToggle');
-  const menu = document.getElementById('fabMenu');
-  if(toggle && menu){
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
-    });
+  if(toggle){
+    // Already has onclick in HTML, no additional logic needed
   }
 })();

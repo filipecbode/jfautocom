@@ -1,142 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JF Autocom — Automação comercial em Brasília desde 2014</title>
-  <meta name="description" content="Automação comercial em Brasília: sistemas para controle fiscal, vendas e estoque, impressoras fiscais e computadores. Desde 2014." />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" />
-  <link rel="icon" href="assets/icon-192.png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <meta property="og:title" content="JF Autocom — Automação comercial" />
-  <meta property="og:description" content="Soluções em automação comercial: sistemas fiscais, PDV, estoque, impressoras fiscais e computadores." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:image" content="assets/og-image.png" />
-  <meta property="og:url" content="" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JF Autocom — Sistemas fiscais, PDV, estoque, impressoras fiscais e computadores. Soluções completas de automação comercial em Brasília-DF desde 2014.">
+  <meta name="keywords" content="sistema fiscal, pdv, automação comercial, impressora fiscal, nfc-e, nf-e, controle de estoque, brasília">
+  <meta name="author" content="JF Autocom">
+  <meta name="robots" content="index, follow">
+  <title>JF Autocom — Sistemas Fiscais, PDV e Automação Comercial | Brasília-DF</title>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jfautocom.com.br">
+  <meta property="og:title" content="JF Autocom — Sistemas Fiscais, PDV e Automação Comercial">
+  <meta property="og:description" content="Soluções completas: sistemas fiscais, PDV, impressoras fiscais e computadores. Atendimento em Brasília desde 2014.">
+  <meta property="og:image" content="/og-image.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon-32.jpg">
+  <link rel="icon" type="image/jpeg" sizes="192x192" href="/icon-192.jpg">
+  <link rel="icon" type="image/jpeg" sizes="512x512" href="/icon-512.jpg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.jpg">
+
+  <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="header-light">
-  <header class="container header">
-    <a class="brand" href="#inicio" aria-label="JF Autocom - início">
-      <img src="assets/logo.png" alt="Logo JF Autocom" class="brand__logo" />
-    </a>
-    <nav class="nav">
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-      <div class="split-cta">
-        <button class="btn btn--whatsapp" onclick="return openWhats('filipe')">WhatsApp — Filipe Bodê</button>
-        <button class="btn btn--whatsapp btn--outline" onclick="return openWhats('paulo')">WhatsApp — Paulo Junior</button>
-      </div>
-    </nav>
-  </header>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__container">
+      <img src="/logo.jpg" alt="JF Autocom logo" class="hero__logo">
+      <h1 class="hero__title">Sistemas fiscais, PDV e estoque</h1>
+      <p class="hero__subtitle">Implantação e suporte de <strong>softwares para controle fiscal</strong>, frentes de caixa (PDV) e <strong>gestão de estoque</strong> integrada.</p>
+      <button class="btn btn--whatsapp" onclick="return openWhats('filipe')">WhatsApp — Contato</button>
+    </div>
+  </section>
 
-  <main id="inicio">
-    <section class="hero container">
-      <div class="hero__text">
-        <h1>Automação comercial em <span class="highlight">Brasília</span> desde 2014</h1>
-        <p>Sistemas para controle fiscal, vendas e estoque, <strong>impressoras fiscais</strong> e <strong>computadores</strong>. Tudo para o seu PDV funcionar com segurança e eficiência.</p>
-        <div class="cta">
-          <a class="btn btn--primary" href="#whatsapp" onclick="return openWhats('filipe','Olá! Quero saber mais sobre os sistemas da JF Autocom.')">Falar com Filipe Bodê</a>
-          <a class="btn btn--ghost" href="#whatsapp" onclick="return openWhats('paulo','Olá, Paulo! Preciso de uma cotação de automação comercial.')">Falar com Paulo Junior</a>
+  <!-- Sobre -->
+  <section class="section section--light" id="sobre">
+    <div class="container">
+      <h2 class="section__title">Quem somos</h2>
+      <p class="section__text">
+        Sistemas para controle fiscal, vendas e estoque, <strong>impressoras fiscais</strong> e <strong>computadores</strong>. Tudo para o seu PDV funcionar com segurança e eficiência.
+      </p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <h2 class="section__title">O que oferecemos</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">💻</div>
+          <h3 class="card__title">Sistemas Fiscais & PDV</h3>
+          <p class="card__text">Implantação e suporte de <strong>softwares para controle fiscal</strong>, frentes de caixa (PDV) e <strong>gestão de estoque</strong> integrada.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🖨️</div>
+          <h3 class="card__title">Impressoras Fiscais</h3>
+          <p class="card__text">Venda e configuração de <strong>impressoras fiscais</strong>, além de integração com emissão de NF-e e NFC-e.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🖥️</div>
+          <h3 class="card__title">Computadores & Equipamentos</h3>
+          <p class="card__text">Fornecimento de <strong>computadores</strong>, periféricos e <strong>equipamentos para automação comercial</strong> prontos para o dia a dia.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🚀</div>
+          <h3 class="card__title">Suporte Rápido</h3>
+          <p class="card__text"><strong>Atendimento ágil</strong> para implantação, treinamento e manutenção, reduzindo paradas no seu negócio.</p>
         </div>
       </div>
-      <div class="hero__media" aria-hidden="true">
-        <div class="dashboard-card">
-          <div class="kpi"><span>NF-e</span><strong>100%</strong></div>
-          <div class="kpi"><span>PDV</span><strong>Online</strong></div>
-          <div class="kpi"><span>Estoque</span><strong>+12k</strong></div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="servicos" class="section container">
-      <h2>O que fazemos</h2>
-      <div class="grid cards">
-        <article class="card">
-          <h3>Sistemas fiscais, PDV e estoque</h3>
-          <p>Implantação e suporte de <strong>softwares para controle fiscal</strong>, frentes de caixa (PDV) e <strong>gestão de estoque</strong> integrada.</p>
-        </article>
-        <article class="card">
-          <h3>Impressoras fiscais & emissão</h3>
-          <p>Venda e configuração de <strong>impressoras fiscais</strong>, além de integração com emissão de <abbr title="Nota Fiscal Eletrônica">NF-e</abbr> e <abbr title="Nota Fiscal de Consumidor Eletrônica">NFC-e</abbr>.</p>
-        </article>
-        <article class="card">
-          <h3>Computadores e equipamentos</h3>
-          <p>Fornecimento de <strong>computadores</strong>, periféricos e <strong>equipamentos para automação comercial</strong> prontos para o dia a dia.</p>
-        </article>
-        <article class="card">
-          <h3>Suporte e implantação</h3>
-          <p><strong>Atendimento ágil</strong> para implantação, treinamento e manutenção, reduzindo paradas no seu negócio.</p>
-        </article>
-      </div>
-    </section>
+  <!-- Diferenciais -->
+  <section class="section section--light" id="diferenciais">
+    <div class="container">
+      <h2 class="section__title">Por que escolher a JF Autocom?</h2>
+      <ul class="list">
+        <li>Experiência no mercado de automação comercial desde 2014</li>
+        <li>Soluções completas: sistema + impressora + computador</li>
+        <li>Atendimento próximo via WhatsApp</li>
+        <li>Brasília-DF e região</li>
+      </ul>
+    </div>
+  </section>
 
-    <section id="sobre" class="section section--alt container">
-      <div class="cols">
-        <div>
-          <h2>Sobre a JF Autocom</h2>
-          <p>Somos uma empresa de Brasília, atuando desde <strong>2014</strong> em automação comercial. Nosso foco é <strong>entregar solução completa</strong> — do sistema à impressora fiscal e ao computador — para que o seu PDV venda sem complicação.</p>
-          <ul class="list">
-            <li>Experiência prática com varejo e restaurantes</li>
-            <li>Conformidade fiscal e boas práticas</li>
-            <li>Atendimento próximo via WhatsApp</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" class="section container">
-      <h2>Fale com a gente</h2>
-      <div class="contact-cards">
-        <article class="contact">
-          <h3>Filipe Bodê</h3>
+  <!-- Contato -->
+  <section class="section" id="contato">
+    <div class="container">
+      <h2 class="section__title">Entre em contato</h2>
+      <div class="contact">
+        <div class="contact__item">
+          <h3 class="contact__name">Filipe Bodê</h3>
           <p><a href="#whatsapp" onclick="return openWhats('filipe')">WhatsApp: +55 61 99538-3096</a></p>
-        </article>
-        <article class="contact">
-          <h3>Paulo Junior</h3>
-          <p><a href="#whatsapp" onclick="return openWhats('paulo')">WhatsApp: +55 61 9441-0768</a></p>
-        </article>
-        <article class="contact">
-          <h3>Email</h3>
-          <p><a href="mailto:jfautocomdf@gmail.com">jfautocomdf@gmail.com</a></p>
-        </article>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> JF Autocom — Brasília, DF — desde 2014</p>
-      <nav class="footer__nav">
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-        <a href="privacy.html">Política de Privacidade (LGPD)</a>
-      </nav>
+    <div class="container footer__container">
+      <p>&copy; <span id="year">2025</span> JF Autocom. Todos os direitos reservados.</p>
+      <p><a href="/privacy.html">Política de Privacidade</a></p>
     </div>
   </footer>
 
-  <!-- Botão flutuante do WhatsApp (menu com 2 contatos) -->
-  <div class="fab-group">
-    <div class="fab-menu" id="fabMenu" aria-label="Contatos WhatsApp">
-      <button class="fab-option" onclick="openWhats('filipe')">Filipe Bodê</button>
-      <button class="fab-option" onclick="openWhats('paulo')">Paulo Junior</button>
-    </div>
-    <button class="fab" aria-label="Abrir menu do WhatsApp" id="fabToggle">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-        <path fill="#25D366" d="M19.11 17.19c-.26-.13-1.54-.76-1.77-.84-.24-.09-.41-.13-.59.13-.17.26-.67.84-.82 1.02-.15.17-.3.2-.56.07-.26-.13-1.09-.4-2.08-1.27-.77-.69-1.29-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.4-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.59-1.41-.81-1.93-.21-.5-.43-.43-.59-.44-.15-.01-.32-.01-.49-.01-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.15 0 1.26.93 2.48 1.06 2.65.13.17 1.83 2.8 4.44 3.91.62.27 1.1.43 1.47.55.62.2 1.19.17 1.64.1.5-.07 1.54-.63 1.76-1.25.22-.62.22-1.15.15-1.26-.06-.1-.23-.16-.49-.29z"/>
-        <path fill="#25D366" d="M16 3C8.82 3 3 8.82 3 16c0 2.29.61 4.46 1.67 6.33L3 29l6.86-1.8C11.66 28.36 13.76 29 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23c-1.98 0-3.82-.58-5.35-1.58l-.38-.24-4.05 1.06 1.09-3.95-.25-.4C6.06 19.82 5.5 18 5.5 16 5.5 10.76 9.76 6.5 15 6.5S24.5 10.76 24.5 16 20.24 26 15 26z"/>
+  <!-- Botão flutuante do WhatsApp -->
+  <div class="fab-menu" id="fabMenu" aria-label="Contato WhatsApp">
+    <button class="fab" aria-label="Abrir WhatsApp" onclick="return openWhats('filipe')" id="fabToggle">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="14" fill="#25D366"/>
+        <path fill="#fff" d="M16 3C8.82 3 3 8.82 3 16c0 2.29.61 4.46 1.67 6.33L3 29l6.86-1.8C11.66 28.36 13.76 29 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23c-1.98 0-3.82-.58-5.35-1.58l-.38-.24-4.05 1.06 1.09-3.95-.25-.4C6.06 19.82 5.5 18 5.5 16 5.5 10.76 9.76 6.5 15 6.5S24.5 10.76 24.5 16 20.24 26 15 26z"/>
+        <path fill="#fff" d="M20.2 18.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.8-.1.1-.2.1-.4 0-.2-.1-.9-.3-1.7-1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.1 0-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.4 0-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.1 1.6 2.4 3.8 3.4.5.2 1 .3 1.3.4.6.2 1.1.2 1.5.1.5-.1 1.2-.5 1.4-.9.2-.5.2-.9.1-1-.1-.1-.2-.2-.4-.3z"/>
       </svg>
       <span class="fab__badge">WhatsApp</span>
     </button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
